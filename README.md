@@ -2,8 +2,7 @@
 
 Este é um sistema de CRUD desenvolvido para demonstrar habilidades em gerenciamento de estado, rotas e consumo de APIs.
 
-![Demonstração do Projeto](<img width="1254" height="684" alt="img-crud" src="https://github.com/user-attachments/assets/5a8d4287-2382-4554-8472-9c43224dc836" />
-)
+
 
 ### ⚠️ Nota Importante: Backend Local
 Atualmente, o frontend está hospedado no Vercel, mas o projeto utiliza uma **API local**.
