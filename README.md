@@ -1,19 +1,28 @@
-# 🚀 Gerenciamento de Clientes (React + Vite)
+# 🚀 Gerenciamento de Clientes (Full Stack)
 
-Este é um sistema de CRUD desenvolvido para demonstrar habilidades em gerenciamento de estado, rotas e consumo de APIs.
+Sistema completo de CRUD (Create, Read, Update, Delete) desenvolvido para demonstrar a integração entre um Frontend em React e um Backend em Node.js.
 
 
+O projeto está hospedado e pode ser acessado nos links abaixo:
 
-### ⚠️ Nota Importante: Backend Local
-Atualmente, o frontend está hospedado no Vercel, mas o projeto utiliza uma **API local**.
-* **Para testar:** É necessário clonar o repositório do [Backend] e executá-lo na porta `3000`.
-```bash
-cd backend
-node server.js
+* **🌐 Frontend (Vercel):** [https://react-crud-clientes-git-main-kesley-santos-projects.vercel.app/]
+* **⚙️ Backend API (Render):** `https://react-crud-clientes-backend-ks.onrender.com`
 
-* **Motivo:** O backend foi mantido local para fins de demonstração de fluxo de desenvolvimento.
+> **⚠️ Nota Importante:** O backend utiliza uma instância gratuita no Render. Caso o sistema esteja inativo há algum tempo, **a primeira requisição pode demorar alguns segundos** para carregar enquanto o servidor "desperta". Após esse período, o funcionamento volta ao normal.
 
-## 🛠️ Tecnologias
-* React
-* Vite
-* Vercel (Hospedagem)
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Frontend**
+* **React** (com Vite)
+* **Axios/Fetch** para consumo de API
+* **Vercel** para hospedagem
+
+### **Backend**
+* **Node.js** e **Express**
+* **CORS** para integração segura
+* **Render** para hospedagem da API
+
+---
+
