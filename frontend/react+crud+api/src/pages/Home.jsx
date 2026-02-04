@@ -45,7 +45,7 @@ function Home() {
 
   return (
     <>
-      <h1>Clientes</h1>
+      <h1>Gerenciamento de Clientes</h1>
 
       <ClientForm
         onSaveClient={handleSaveClient}
