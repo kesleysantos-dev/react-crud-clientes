@@ -2,7 +2,9 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3000;
+
+// AQUI ESTAVA O ERRO: Ajustamos para aceitar a porta do Render ou a 3000 local
+const PORT = process.env.PORT || 3000; 
 
 app.use(cors());
 app.use(express.json());
@@ -12,6 +14,11 @@ let clients = [
   { id: 1, name: "João", email: "joao@email.com" },
   { id: 2, name: "Maria", email: "maria@email.com" },
 ];
+
+// Rota inicial para o Render não dar erro de "Not Found"
+app.get("/", (req, res) => {
+  res.send("API rodando 🚀");
+});
 
 // GET - listar clientes
 app.get("/clients", (req, res) => {
@@ -25,7 +32,6 @@ app.post("/clients", (req, res) => {
     name: req.body.name,
     email: req.body.email,
   };
-
   clients.push(newClient);
   res.status(201).json(newClient);
 });
@@ -33,19 +39,14 @@ app.post("/clients", (req, res) => {
 // DELETE - Deletar Clientes
 app.delete("/clients/:id", (req, res) => {
   const id = Number(req.params.id);
-
   clients = clients.filter((client) => client.id !== id);
-
   res.status(204).end();
 });
 
-//UPDATE - Editar Clientes
+// UPDATE - Editar Clientes
 app.put("/clients/:id", (req, res) => {
   const id = Number(req.params.id);
-
-  const index = clients.findIndex(
-    (client) => client.id === id
-  );
+  const index = clients.findIndex((client) => client.id === id);
 
   if (index === -1) {
     return res.status(404).json({ message: "Cliente não encontrado" });
@@ -55,18 +56,10 @@ app.put("/clients/:id", (req, res) => {
     ...clients[index],
     ...req.body,
   };
-
   res.json(clients[index]);
 });
 
-
-// servidor
-const PORT = process.env.PORT || 3000;
-
+// Servidor rodando
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
-});
-
-app.get("/", (req, res) => {
-  res.send("API rodando 🚀");
 });
