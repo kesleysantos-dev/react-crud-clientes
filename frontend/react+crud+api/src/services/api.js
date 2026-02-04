@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/clients";
+const API_URL = "https://react-crud-clientes-backend-ks.onrender.com/clients";
 
 export async function getClients() {
   const response = await fetch(API_URL);
@@ -17,14 +17,14 @@ export async function createClient(client) {
   return response.json();
 }
 export async function deleteClient(id) {
-  await fetch(`http://localhost:3000/clients/${id}`, {
+  await fetch(`https://react-crud-clientes-backend-ks.onrender.com/clients/${id}`, {
     method: "DELETE",
   });
 }
 
 export async function updateClient(id, client) {
   const res = await fetch(
-    `http://localhost:3000/clients/${id}`,
+    `https://react-crud-clientes-backend-ks.onrender.com/clients/${id}`,
     {
       method: "PUT",
       headers: {
