@@ -26,10 +26,3 @@ O projeto está hospedado e pode ser acessado nos links abaixo:
 
 ---
 
-## 🏗️ Como rodar o projeto localmente
-
-Se desejar rodar o projeto em sua máquina:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/kesleysantos-dev/react-crud-clientes.git](https://github.com/kesleysantos-dev/react-crud-clientes.git)
