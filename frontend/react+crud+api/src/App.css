@@ -40,3 +40,83 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+
+
+
+/* Ajuste Responsivo para Celular */
+@media (max-width: 768px) {
+    
+    /* Faz o formulário e a lista ficarem um embaixo do outro */
+    .App, .container, .main-content { 
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Ajusta os campos de texto para não ficarem apertados */
+    input {
+        width: 100% !important;
+        margin-bottom: 15px;
+        padding: 12px;
+        box-sizing: border-box; /* Isso evita que o input passe da borda da tela */
+    }
+
+    /* Ajusta o botão para ser fácil de clicar com o dedo */
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+
+    /* Tudo o que estiver aqui só funciona no Celular */
+@media (max-width: 768px) {
+    
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    li {
+        display: flex;
+        flex-direction: column;
+        background: #f9f9f9; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    
+    .client-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .client-info strong {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .client-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .client-actions button {
+        flex: 1; 
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+    }
+}
+}
