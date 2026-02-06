@@ -47,76 +47,45 @@
 
 
 
-/* Ajuste Responsivo para Celular */
 @media (max-width: 768px) {
     
-    /* Faz o formulário e a lista ficarem um embaixo do outro */
-    .App, .container, .main-content { 
+    form, .ClientForm { 
         display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    /* Ajusta os campos de texto para não ficarem apertados */
-    input {
-        width: 100% !important;
-        margin-bottom: 15px;
-        padding: 12px;
-        box-sizing: border-box; /* Isso evita que o input passe da borda da tela */
-    }
-
-    /* Ajusta o botão para ser fácil de clicar com o dedo */
-    button {
+        flex-direction: column; 
         width: 100%;
-        padding: 15px;
     }
 
-
-    /* Tudo o que estiver aqui só funciona no Celular */
-@media (max-width: 768px) {
-    
-    
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    form input {
+        margin-bottom: 10px; 
+        width: 100%;
+        height: 45px; 
     }
 
-    
+    form button {
+        width: 100%; 
+    }
     li {
         display: flex;
-        flex-direction: column;
-        background: #f9f9f9; 
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        flex-direction: column; 
+        align-items: flex-start; 
         padding: 15px;
-        margin-bottom: 15px;
+        gap: 15px;
     }
 
-    
+    /*Nome e Email */
     .client-info {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
+        width: 100%;
     }
 
-    .client-info strong {
-        font-size: 1.2rem;
-        color: #333;
-    }
-
+    /* botões Editar/Excluir */
     .client-actions {
         display: flex;
+        width: 100%; 
         gap: 10px;
     }
 
     .client-actions button {
         flex: 1; 
-        padding: 12px;
-        cursor: pointer;
-        border-radius: 5px;
-        border: none;
-        font-weight: bold;
+        padding: 10px;
     }
-}
 }
