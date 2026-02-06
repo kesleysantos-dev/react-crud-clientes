@@ -1,7 +1,7 @@
 /* Estilos Gerais (Desktop e Mobile) */
 #root {
   width: 100%;
-  max-width: 800px; /* Deixa o CRUD mais elegante e centralizado */
+  max-width: 800px; 
   margin: 0 auto;
   padding: 20px;
 }
@@ -26,7 +26,7 @@ li {
   background: white;
   margin-bottom: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra leve de Jr Profissional */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
 }
 
 .client-info {
@@ -39,21 +39,43 @@ li {
   display: flex;
   gap: 10px;
 }
+.loading-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* Ajustes Específicos para o Celular */
 @media (max-width: 768px) {
     form {
-        flex-direction: column; /* Empilha os inputs */
+        flex-direction: column; 
     }
 
     form input, form button {
         width: 100%;
-        height: 48px; /* Tamanho bom para toque */
+        height: 48px; 
     }
 
     li {
-        flex-direction: column; /* Empilha o texto e os botões */
-        align-items: stretch; /* Faz os botões ocuparem a largura toda */
+        flex-direction: column; 
+        align-items: stretch; 
         text-align: center;
     }
 
@@ -67,7 +89,8 @@ li {
     }
 
     .client-actions button {
-        flex: 1; /* Botões dividem o espaço 50/50 */
+        flex: 1; 
         padding: 12px;
     }
+    
 }
